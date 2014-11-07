@@ -8,6 +8,7 @@
  * do proper ghost mechanics (blinky/wimpy etc)
  */
 
+// Adjustable speed
 var SPEEDMOD = 2
 
 var NONE        = 4,

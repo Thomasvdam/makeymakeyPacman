@@ -8,6 +8,8 @@
  * do proper ghost mechanics (blinky/wimpy etc)
  */
 
+var SPEEDMOD = 2
+
 var NONE        = 4,
     UP          = 3,
     LEFT        = 2,
@@ -33,7 +35,7 @@ Pacman.Ghost = function (game, map, colour) {
     
     function getNewCoord(dir, current) { 
         
-        var speed  = isVunerable() ? 1 : isHidden() ? 4 : 2,
+        var speed  = (isVunerable() ? 1 : isHidden() ? 4 : 2)/SPEEDMOD,
             xSpeed = (dir === LEFT && -speed || dir === RIGHT && speed || 0),
             ySpeed = (dir === DOWN && speed || dir === UP && -speed || 0);
     
